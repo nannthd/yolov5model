@@ -73,7 +73,7 @@ def run(
     data=ROOT / "data/coco128.yaml",  # dataset.yaml path
     imgsz=(640, 640),  # inference size (height, width)
     conf_thres=0.25,  # confidence threshold
-    iou_thres=0.45,  # NMS IOU threshold
+    iou_thres=0.7,  # NMS IOU threshold
     max_det=1000,  # maximum detections per image
     device="",  # cuda device, i.e. 0 or 0,1,2,3 or cpu
     view_img=False,  # show results
@@ -83,7 +83,8 @@ def run(
     save_crop=False,  # save cropped prediction boxes
     nosave=False,  # do not save images/videos
     classes=None,  # filter by class: --class 0, or --class 0 2 3
-    agnostic_nms=False,  # class-agnostic NMS
+    # agnostic_nms=False,  # class-agnostic NMS
+    agnostic_nms=True,  # class-agnostic NMS
     augment=False,  # augmented inference
     visualize=False,  # visualize features
     update=False,  # update all models
